@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Ma Bibliothèque</h1>
+        </header>
+        
+        <main>
+            <!-- Ajouter un livre -->
+            <section>
+                <h2>Ajouter un livre</h2>
+                <form id="form-ajout">
+                    <input type="text" id="titre" placeholder="Titre">
+                    <input type="number" id="annee" placeholder="Année">
+                    <input type="text" id="auteur" placeholder="Auteur">
+                    <button type="submit">Ajouter</button>
+                </form>
+            </section>
+            
+            <!-- Rechercher un livre -->
+            <section>
+                <h2>Rechercher</h2>
+                <div class="search-box">
+                    <input type="text" id="recherche" placeholder="Titre du livre">
+                    <button id="btn-rechercher">Rechercher</button>
+                </div>
+            </section>
+            
+            <!-- Afficher les livres -->
+            <section>
+                <h2>Bibliothèque</h2>
+                <button id="btn-afficher">Afficher tous les livres</button>
+                <div id="bibliothequeDisplay"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

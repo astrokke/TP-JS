@@ -1,0 +1,105 @@
+/* Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    padding: 15px;
+}
+
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Sections */
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* Formulaires */
+input, button {
+    padding: 8px;
+    margin: 5px 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3367d6;
+}
+
+/* Livres */
+#bibliothequeDisplay {
+    margin-top: 15px;
+}
+
+.livre {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.livre span {
+    flex: 1;
+}
+
+.livre button {
+    width: auto;
+    margin-left: 5px;
+    padding: 5px 10px;
+}
+
+.search-box {
+    display: flex;
+    gap: 5px;
+}
+
+.search-box input {
+    flex: 1;
+}
+
+.search-box button {
+    width: auto;
+}
+
+/* Messages */
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
