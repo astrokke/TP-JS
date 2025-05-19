@@ -10,16 +10,64 @@
     <div class="container">
         <header>
             <h1>Ma Bibliothèque</h1>
+            <div id="user-info">
+                <div id="login-form">
+                    <input type="email" id="user-email" placeholder="Email">
+                    <input type="password" id="user-password" placeholder="Mot de passe">
+                    <button id="btn-login">Se connecter</button>
+                    <a href="register.html" class="register-link">S'inscrire</a>
+                </div>
+                <div id="user-display" style="display: none;">
+                    <span id="user-name"></span>
+                    <button id="btn-logout">Se déconnecter</button>
+                </div>
+            </div>
         </header>
         
         <main>
             <!-- Ajouter un livre -->
-            <section>
+            <section id="add-book-section" style="display: none;">
                 <h2>Ajouter un livre</h2>
                 <form id="form-ajout">
-                    <input type="text" id="titre" placeholder="Titre">
-                    <input type="number" id="annee" placeholder="Année">
-                    <input type="text" id="auteur" placeholder="Auteur">
+                    <div class="form-group">
+                        <label>Titre:</label>
+                        <input type="text" id="titre" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Auteur:</label>
+                        <input type="text" id="auteur" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Année:</label>
+                        <input type="number" id="annee" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Type de livre:</label>
+                        <select id="type" required>
+                            <option value="papier">Livre papier</option>
+                            <option value="numerique">Livre numérique</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Champs spécifiques pour livre papier -->
+                    <div id="papier-fields" class="type-fields">
+                        <div class="form-group">
+                            <label>Nombre de pages:</label>
+                            <input type="number" id="pages">
+                        </div>
+                    </div>
+                    
+                    <!-- Champs spécifiques pour livre numérique -->
+                    <div id="numerique-fields" class="type-fields" style="display: none;">
+                        <div class="form-group">
+                            <label>Taille (MB):</label>
+                            <input type="number" id="taille">
+                        </div>
+                    </div>
+                    
                     <button type="submit">Ajouter</button>
                 </form>
             </section>
@@ -42,6 +90,6 @@
         </main>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 </html>
