@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter un livre</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ajouter un livre</h1>
+        <form id="livreForm">
+            <input type="text" id="titre" placeholder="Titre" required>
+            <input type="text" id="auteur" placeholder="Auteur" required>
+            <input type="number" id="annee" placeholder="Année" required>
+            <select id="type" onchange="toggleFields()">
+                <option value="papier">Livre Papier</option>
+                <option value="numerique">Livre Numérique</option>
+            </select>
+            <div id="papierFields">
+                <input type="number" id="pages" placeholder="Nombre de pages">
+            </div>
+            <div id="numeriqueFields" style="display: none;">
+                <input type="number" id="taille" placeholder="Taille en Mo">
+            </div>
+            <button type="submit">Ajouter</button>
+        </form>
+        <button onclick="window.location.href='index.html'">Retour</button>
+    </div>
+    <script src="classes.js"></script>
+    <script src="script.js"></script>
+    <script>
+        function toggleFields() {
+            const type = document.getElementById('type').value;
+            document.getElementById('papierFields').style.display = type === 'papier' ? 'block' : 'none';
+            document.getElementById('numeriqueFields').style.display = type === 'numerique' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html> 

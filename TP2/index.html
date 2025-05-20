@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque</title>
+    <link rel="stylesheet" href="stylle.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestion de Bibliothèque</h1>
+        <div class="menu">
+            <button onclick="window.location.href='formulaire.html'">Ajouter un livre</button>
+            <button onclick="afficherLivres()">Afficher tous les livres</button>
+            <button onclick="window.location.href='recherche.html'">Rechercher un livre</button>
+            <button onclick="quitter()">Quitter</button>
+        </div>
+        <div id="livresListe"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bibliothèque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gestion de Bibliothèque</h1>
+        <div id="userInfo"></div>
+        <div class="menu">
+            <button onclick="window.location.href='formulaire.html'">Ajouter un livre</button>
+            <button onclick="afficherLivres()">Afficher tous les livres</button>
+            <button onclick="window.location.href='recherche.html'">Rechercher un livre</button>
+            <button onclick="afficherEmprunts()">Voir mes emprunts</button>
+            <button onclick="deconnexion()" class="deconnexion">Se déconnecter</button>
+        </div>
+        <div id="livresListe"></div>
+    </div>
+    <script src="classes.js"></script>
+    <script src="script.js"></script>
+    <script>
+        window.onload = function() {
+            verifierConnexion();
+            const userInfo = document.getElementById('userInfo');
+            userInfo.innerHTML = `
+                <p>Connecté en tant que : ${utilisateurActuel.nom} (${utilisateurActuel instanceof Bibliothecaire ? 'Bibliothécaire' : 'Membre'})</p>
+            `;
+        }
+    </script>
+</body>
+</html>
